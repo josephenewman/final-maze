@@ -56,7 +56,7 @@ def Escape():
 
 if __name__ == '__main__':
   with open('maze.txt') as csv_file:
-    maze = csv.reader(csv_file, delimiter=',')
+    maze = list(csv.reader(csv_file, delimiter=','))
 
     start, finish = StartFinish()
     maze[start[0]][start[1]] = 'p'
